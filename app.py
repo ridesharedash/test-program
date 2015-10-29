@@ -105,7 +105,7 @@ def products():
         'latitude' : os.environ.get('start_latitude'),
         'longitude' : os.environ.get('start_longitude'),
     }
-print os.environ.get('start_latitude')
+    
     response = app.requests_session.get(
         url,
         headers=generate_ride_headers(session.get('access_token')),
