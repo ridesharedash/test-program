@@ -100,10 +100,12 @@ def products():
 
     Returns all the products currently available from coordinates in Environment variables.
     """
+    latitude = input('Enter the latitude: ')
+    longitude = input('Enter the longitude: ')
     url = config.get('base_uber_url') + 'products'
     params = {
-        'latitude': config.get('start_latitude'),
-        'longitude': config.get('start_longitude'),
+        'latitude' : latitude, #: config.get('start_latitude'),
+        'longitude' : longitude, #: config.get('start_longitude'),
     }
 
     response = app.requests_session.get(
