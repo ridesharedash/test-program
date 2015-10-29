@@ -6,8 +6,8 @@
     "name": "Sample app",
     "base_uber_url": "https://api.uber.com/v1/",
     "base_uber_url_v1_1" : "https://api.uber.com/v1.1/",
-    "start_latitude": os.environ.get('start_latitude'), #"37.781955",
-    "start_longitude": os.environ.get('start_longitude'), # "-122.402367",
-    "end_latitude": os.environ.get('end_longitude'), #"37.744352",
-    "end_longitude": os.environ.get('end_latitude') #"-122.416743
+    "start_latitude": "37.781955",
+    "start_longitude": "-122.402367",
+    "end_latitude": "37.744352",
+    "end_longitude": "-122.416743"
 }
