@@ -10,5 +10,17 @@
     "UBER_CLIENT_SECRET": {
       "description": "Your Uber API client secret"
     }
+    "start_longitude": {
+      "description": "Your starting longitude (where products are priced)"
+    },
+    "start_latitude": {
+      "description": "Your starting latitude (where products are priced)"
+    },
+    "end_longitude": {
+      "description": "Your destination longitude (where trip is priced)"
+    },
+    "end_latitude": {
+      "description": "Your destination latitude (where trip is priced)"
+    },
   }
 }
