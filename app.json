@@ -9,7 +9,7 @@
     },
     "UBER_CLIENT_SECRET": {
       "description": "Your Uber API client secret"
-    }
+    },
     "start_longitude": {
       "description": "Your starting longitude (where products are priced)"
     },
