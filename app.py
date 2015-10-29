@@ -159,7 +159,7 @@ def price():
         'start_latitude': os.environ.get('start_latitude'),
         'start_longitude': os.environ.get('start_longitude'),
         'end_latitude': os.environ.get('end_latitude'),
-        'end_longitude': os.environ.get(end_longitude'),
+        'end_longitude': os.environ.get('end_longitude'),
     }
 
     response = app.requests_session.get(
