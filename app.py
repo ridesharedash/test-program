@@ -98,12 +98,12 @@ def demo():
 def products():
     """Example call to the products endpoint.
 
-    Returns all the products currently available in San Francisco.
+    Returns all the products currently available from coordinates in Environment variables.
     """
     url = config.get('base_uber_url') + 'products'
     params = {
-        'latitude': config.get('start_latitude'),
-        'longitude': config.get('start_longitude'),
+        'latitude': os.environ.get('start_latitude'),
+        'longitude': os.environ.get('start_longitude'),
     }
 
     response = app.requests_session.get(
@@ -129,8 +129,8 @@ def time():
     """
     url = config.get('base_uber_url') + 'estimates/time'
     params = {
-        'start_latitude': config.get('start_latitude'),
-        'start_longitude': config.get('start_longitude'),
+        'start_latitude': os.environ.get('start_latitude'),
+        'start_longitude': os.environ.get('start_longitude'),
     }
 
     response = app.requests_session.get(
@@ -156,10 +156,10 @@ def price():
     """
     url = config.get('base_uber_url') + 'estimates/price'
     params = {
-        'start_latitude': config.get('start_latitude'),
-        'start_longitude': config.get('start_longitude'),
-        'end_latitude': config.get('end_latitude'),
-        'end_longitude': config.get('end_longitude'),
+        'start_latitude': os.environ.get('start_latitude'),
+        'start_longitude': os.environ.get('start_longitude'),
+        'end_latitude': os.environ.get('end_latitude'),
+        'end_longitude': os.environ.get(end_longitude'),
     }
 
     response = app.requests_session.get(
