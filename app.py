@@ -102,7 +102,6 @@ def products():
     """
     #latitude = input('Enter the latitude: ')
     #longitude = input('Enter the longitude: ')
-    return os.environ.get('start_latitude')
     url = config.get('base_uber_url') + 'products'
     params = {
         'latitude' : os.environ.get('start_latitude'),
