@@ -1,6 +1,5 @@
 from __future__ import absolute_import
 
-import web
 import json
 import os
 from urlparse import urlparse
@@ -101,11 +100,11 @@ def products():
 
     Returns all the products currently available from coordinates in Environment variables.
     """
-    form = web.input(lat="37.781955", lon="-122.402367")
+    #form = web.input(lat="37.781955", lon="-122.402367")
     url = config.get('base_uber_url') + 'products'
     params = {
-        'latitude' : form.lat, #os.environ.get('start_latitude'),
-        'longitude' : form.lon, #os.environ.get('start_longitude'),
+        'latitude' : os.environ.get('start_latitude'),
+        'longitude' : os.environ.get('start_longitude'),
     }
     
     response = app.requests_session.get(
@@ -113,7 +112,7 @@ def products():
         headers=generate_ride_headers(session.get('access_token')),
         params=params,
     )
-    return(form.lon)
+    
     if response.status_code != 200:
         return 'There was an error', response.status_code
     return render_template(
