@@ -104,8 +104,8 @@ def products():
     #longitude = input('Enter the longitude: ')
     url = config.get('base_uber_url') + 'products'
     params = {
-        'latitude' : config.get('start_latitude'),
-        'longitude' : config.get('start_longitude'),
+        'latitude' : os.environ..get('start_latitude'),
+        'longitude' : os.environ..get('start_longitude'),
     }
 
     response = app.requests_session.get(
