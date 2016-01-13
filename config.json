@@ -6,8 +6,6 @@
     "name": "Sample app",
     "base_uber_url": "https://api.uber.com/v1/",
     "base_uber_url_v1_1" : "https://api.uber.com/v1.1/",
-    "UBER_CLIENT_ID": "ifCj7ccxhcy2OzyusGYUlzVusPYAji10",
-    "UBER_CLIENT_SECRET": "NNXy1964XiMEr4Z9Hkr5-18-IQPo-STarkPPLKIa",
     "start_latitude": "37.781955",
     "start_longitude": "-122.402367",
     "end_latitude": "37.744352",
