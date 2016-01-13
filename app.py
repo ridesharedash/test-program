@@ -103,8 +103,8 @@ def products():
     #form = web.input(lat="37.781955", lon="-122.402367")
     url = config.get('base_uber_url') + 'products'
     params = {
-        'latitude' : os.environ.get('start_latitude'),
-        'longitude' : os.environ.get('start_longitude'),
+        'latitude' : config.get('start_latitude'),
+        'longitude' : config.get('start_longitude'),
     }
     
     response = app.requests_session.get(
@@ -130,8 +130,8 @@ def time():
     """
     url = config.get('base_uber_url') + 'estimates/time'
     params = {
-        'start_latitude': os.environ.get('start_latitude'),
-        'start_longitude': os.environ.get('start_longitude'),
+        'start_latitude': config.get('start_latitude'),
+        'start_longitude': config.get('start_longitude'),
     }
 
     response = app.requests_session.get(
@@ -157,10 +157,10 @@ def price():
     """
     url = config.get('base_uber_url') + 'estimates/price'
     params = {
-        'start_latitude': os.environ.get('start_latitude'),
-        'start_longitude': os.environ.get('start_longitude'),
-        'end_latitude': os.environ.get('end_latitude'),
-        'end_longitude': os.environ.get('end_longitude'),
+        'start_latitude': config.get('start_latitude'),
+        'start_longitude': config.get('start_longitude'),
+        'end_latitude': config.get('end_latitude'),
+        'end_longitude': config.get('end_longitude'),
     }
 
     response = app.requests_session.get(
